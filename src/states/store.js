@@ -1,5 +1,5 @@
-import { configureStore } from "redux";
-import reducers from './Reducers/reducers';
+import { configureStore } from "@reduxjs/toolkit";
+import reducers from './Reducers/totalred';
 import {thunk} from 'redux-thunk';
 // import logger from 'redux-logger';
 
@@ -9,7 +9,6 @@ const store = configureStore({
         return [
             ...getDefaultMiddleware(),
             thunk,
-            logger
         ];
     }
 });

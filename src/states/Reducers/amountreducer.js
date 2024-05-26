@@ -1,8 +1,8 @@
 const fun=(state=0,action)=>{
     if(action.type==='deposit'){
-        return action.payload+state;
+        return Number.parseInt(action.payload)+state;
     }else if(action.type==='withdraw'){
-        return state-action.payload;
+        return state-Number.parseInt(action.payload);
     }else{
         return state;
     }
